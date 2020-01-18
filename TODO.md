@@ -1,3 +1,9 @@
-- write context to get/set the dat gui info
-  - see if each component can control its own dat gui panel
-- write a GLTF model component
+- [x] write context to get/set the dat gui info
+  - [x] see if each component can control its own dat gui panel
+- [ ] write a GLTF model component
+- [ ] stub out all the various light components
+- [ ] create dat gui component groups:
+  - [ ] 3 value position
+  - [ ] 3 value rotation
+    - [ ] use Math.PI abstractions so values are represented as (π / 6) for example
+  - [ ] Defaults for lights, etc..., so a folder that had position, intensity, etc... already baked

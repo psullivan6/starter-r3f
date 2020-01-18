@@ -1,0 +1,1 @@
+- Opted for `zustand` instead of React `context` because you can't wrap it around the r3f `Canvas` element. Noted here: https://spectrum.chat/react-three-fiber/general/easy-peasy-state-management~a16c363d-543e-4e0e-9c2c-fbd14870376e?m=MTU3NDE1ODY3MzMxMw==

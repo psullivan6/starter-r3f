@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import DatGui, {
-  // DatBoolean,
-  DatColor
-  // DatNumber,
-  // DatString
-} from '@tim-soft/react-dat-gui';
+// Components
+import DatGui from '@tim-soft/react-dat-gui';
+
+// Store
+import { useStore } from './store';
 
 export const Container = styled(DatGui)`
   z-index: 10;
@@ -15,21 +14,15 @@ export const Container = styled(DatGui)`
 `;
 
 const Debugger = ({ onUpdate, ...props }) => {
-  const [data, setData] = useState({
-    color: '#f03'
-  });
+  const { components, data, setData } = useStore();
 
   const handleUpdate = updatedData => {
     setData({ ...data, ...updatedData });
   };
 
-  useEffect(() => {
-    onUpdate(data);
-  }, [data, onUpdate]);
-
   return (
     <Container data={data} onUpdate={handleUpdate}>
-      <DatColor path="color" label="Feels Like" />
+      {components}
     </Container>
   );
 };

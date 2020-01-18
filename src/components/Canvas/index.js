@@ -9,13 +9,10 @@ const CanvasContainer = styled.div`
   height: 600px;
 `;
 
-const CanvasComponent = ({ children, ...props }) => {
-  console.log('props', props);
-  return (
-    <CanvasContainer>
-      <Canvas {...props}>{children}</Canvas>
-    </CanvasContainer>
-  );
-};
+const CanvasComponent = ({ children, ...props }) => (
+  <CanvasContainer>
+    <Canvas {...props}>{children}</Canvas>
+  </CanvasContainer>
+);
 
 export default CanvasComponent;
