@@ -1,0 +1,3 @@
+- write context to get/set the dat gui info
+  - see if each component can control its own dat gui panel
+- write a GLTF model component
